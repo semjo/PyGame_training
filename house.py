@@ -1,4 +1,14 @@
 import pygame
+from pygame.locals import *
+from math import *
+
+RED_COLOR = (255, 0, 0)
+GREEN_COLOR = (0, 255, 0)
+BLUE_COLOR = (0, 0, 255)
+CYAN_COLOR = (0, 255, 255)
+BROWN_COLOR = (100, 100, 0)
+BLACK_COLOR = (0, 0, 0)
+
 
 def draw_picture(screen, x, y, width, height):
     """
@@ -27,7 +37,8 @@ def draw_background(screen, x, y, width, height):
     :param width: ширина прямоугольника
     :param height: высота прямоугольника
     """
-    print("Типа рисую фон", x, y, width, height)
+    pygame.draw.rect(screen, GREEN_COLOR, pygame.Rect((0, height // 2),(width, height // 2)))
+    pygame.draw.rect(screen, CYAN_COLOR, pygame.Rect((0, 0), (width, height // 2)))
 
 
 def draw_house(screen, x, y, width, height):
